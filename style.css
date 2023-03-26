@@ -1,6 +1,31 @@
+@font-face {
+	font-family: 'basis-grotesque';
+	src: url('/assets/fonts/BasisGrotesquePro-Regular.ttf') format('ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
 :root {
 	/* Add your own custom properties here */
-	--clr-primary-400: blue;
+	--color-background: #121211;
+	--color-text: #e1dbd7;
+
+	--font-body: 'basis-grotesque', sans-serif;
+	--font-heading: 'Syne', sans-serif;
+
+	--text-base: 1rem;
+	--text-lg: 1.125rem;
+	--text-xl: 1.625rem;
+	--text-2xl: 4.125rem;
+	--text-3xl: 5rem;
+	--text-4xl: 5.625rem;
+	--text-5xl: 8rem;
+}
+
+:root.dark-theme {
+	/* Add your own custom properties here */
+	--color-background: #efebe8;
+	--color-text: #1a1a1a;
 }
 
 /*─────────────────────────────────────────────────────────────────────────────────────────────────*/
@@ -91,4 +116,41 @@ select {
 		transition-duration: 0.01ms !important;
 		scroll-behavior: auto !important;
 	}
+}
+
+body {
+	background: var(--color-background);
+	color: var(--color-text);
+	font-family: var(--font-body);
+}
+
+/* Utility classes */
+.text-base {
+	font-size: var(--text-base);
+}
+.text-lg {
+	font-size: var(--text-lg);
+}
+.text-xl {
+	font-size: var(--text-xl);
+}
+.text-2xl {
+	font-size: var(--text-2xl);
+}
+.text-3xl {
+	font-size: var(--text-3xl);
+}
+.text-4xl {
+	font-size: var(--text-4xl);
+}
+.text-5xl {
+	font-size: var(--text-5xl);
+}
+
+.font-heading {
+	font-family: var(--font-heading);
+}
+
+.uppercase {
+	text-transform: uppercase;
 }
